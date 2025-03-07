@@ -1,17 +1,16 @@
-import stancLogo from "../public/stanc-logo.png";
-import "./App.css";
+import ThemeToggle from "./Components/ThemeToggle";
+import Navbar from "./Components/Navbar";
+import "./App.css"; // Assuming your global styles are in App.css
+// import Layout from "./Components/Layout";
 
-function App() {
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={stancLogo} className="logo" alt="Vite logo" />
-        </a>
-      </div>
-      <h1>Stanc.dev</h1>
+      <Navbar />
+      <ThemeToggle />
+      {/* <Layout /> */}
     </>
   );
-}
+};
 
 export default App;
