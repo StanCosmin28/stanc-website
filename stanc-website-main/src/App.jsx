@@ -1,15 +1,17 @@
-import ThemeToggle from "./Components/ThemeToggle";
+// import ThemeToggle from "./Components/ThemeToggle";
 import Navbar from "./Components/Navbar";
-import "./App.css"; // Assuming your global styles are in App.css
-// import Layout from "./Components/Layout";
+import Header from "./Components/Header";
+import "./App.css";
 
 const App = () => {
   return (
+    // <div className="max-w-screen-md felx justify-center mx-auto relative">
     <>
+      {/* <ThemeToggle /> */}
       <Navbar />
-      <ThemeToggle />
-      {/* <Layout /> */}
+      <Header />
     </>
+    // </div>
   );
 };
 

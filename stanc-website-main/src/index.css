@@ -2,19 +2,21 @@
 /* App.css */
 /* Default Light Mode */
 body {
-  background-color: #ffffff;
-  color: #000000;
+  /* background-color: #ffffff; */
+  background-color: rgb(28, 28, 30);
+  color: #ffffff;
+  /* color: #000000; */
   transition: all 0.3s ease;
 }
 
 /* Dark Mode */
-body.dark {
+/* body.dark {
   background-color: rgb(28, 28, 30);
   color: #ffffff;
-}
+} */
 
 /* Customize other components for dark mode */
-body.dark .text-gray-800 {
+/* body.dark .text-gray-800 {
   color: #d1d5db;
 }
 
@@ -24,4 +26,4 @@ body.dark .bg-gray-200 {
 
 body.dark .bg-gray-700 {
   background-color: #4b5563;
-}
+} */

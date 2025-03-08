@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
+import Me from "./Me";
 import "./navbar.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,11 +8,11 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const navItems = [
-    { name: "Notes", href: "#notes" },
-    { name: "Creations", href: "#creations" },
-    { name: "Uses", href: "#uses" },
-    { name: "Resume", href: "#resume" },
+    { name: "Services", href: "#services" },
     { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Resources", href: "#resources" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const toggleMenu = () => {
@@ -53,15 +54,15 @@ const Navbar = () => {
         }`}
       >
         <Logo />
-        <div className="flex md:justify-center justify-end mt-6 md:mr-0 mr-20 text-sm">
-          <div className="bg-white nav-bg px-5 md:py-3 py-2 rounded-full shadow-md ">
+        <div className="flex md:justify-center justify-end mt-10 md:mr-0 mr-20 text-sm">
+          <div className="nav-bg px-5 md:py-3 py-2 rounded-full shadow-md ">
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors"
+                  className="text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-green-600 font-medium transition-colors"
                 >
                   {item.name}
                 </a>
@@ -72,7 +73,7 @@ const Navbar = () => {
             <div className="md:hidden flex">
               <button
                 onClick={toggleMenu}
-                className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 focus:outline-none text-base"
+                className="flex items-center text-gray-700 dark:text-gray-300 hover:text-green-600  focus:outline-none text-base"
               >
                 Menu
                 {/* Chevron down icon using HTML/CSS */}
@@ -83,19 +84,20 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        <Me />
       </nav>
 
       {/* Mobile Menu Modal */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-start md:hidden h-auto mt-6">
+        <div className="fixed inset-0 z-50 flex items-start md:hidden h-auto pt-8">
           {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-opacity-50 backdrop-blur-sm "
+            className="absolute inset-0 bg-opacity-50 backdrop-blur-sm"
             onClick={closeMenu}
           ></div>
 
           {/* Modal Content */}
-          <div className="relative bg-white dark:bg-gray-800 w-11/12 mx-auto rounded-lg shadow-xl">
+          <div className="nav-bg relative bg-white dark:bg-gray-800 w-11/12 mx-auto rounded-lg shadow-xl">
             {/* Close Button */}
             <button
               onClick={closeMenu}
@@ -115,7 +117,7 @@ const Navbar = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400 text-lg font-medium text-left border-b pb-2 transition-colors"
+                    className="text-gray-700 hover:text-green-600 dark:text-gray-300 text-lg font-medium text-left border-b pb-2 transition-colors"
                     onClick={closeMenu}
                   >
                     {item.name}
