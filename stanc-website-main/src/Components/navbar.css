@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.nav-bg {
+  background: rgb(55, 55, 59, 0.7);
+}
