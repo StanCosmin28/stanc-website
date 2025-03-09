@@ -1,5 +1,4 @@
-import stancLogo from "../../public/test.png";
-// import stancLogo from "../../public/stanc-logo.png";
+import stancLogo from "../assets/test.png";
 export default function Logo() {
   return (
     <div className="absolute md:left-34 left-6 top-10">
