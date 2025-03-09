@@ -1,30 +1,47 @@
+import BlurText from "./BlurText";
 export default function Header() {
+  // const handleAnimationComplete = () => {
+  //   console.log("Animation completed!");
+  // };
   return (
-    // <div className="z-0 flex justify-center items-center mt-24">
-    //   <h1>Hey, Stan here!</h1>
-    // </div>
-    <header className="bricolage-grotesque-regular text-white py-10 md:pt-55 pt-40">
-      <div className="container mx-auto max-w-screen-md px-4 text-center ">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-          {/* Building Scalable & Impactful Web Solutions. */}
-          Building Digital Products, Brands, and Experiences
-        </h1>
+    <>
+      {/* <Squares
+        speed={0.5}
+        squareSize={40}
+        direction="diagonal" // up, down, left, right, diagonal
+        borderColor="#fff"
+        hoverFillColor="#222"
+      /> */}
+      <header className="bricolage-grotesque-regular text-white  md:pt-55 pt-40 relative">
+        <div className="container mx-auto max-w-screen-md px-4 text-center">
+          {/* <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+            Building Digital Products, Brands, and Experiences
+          </h1> */}
+          <BlurText
+            text="Building Digital Products, Brands, and Experiences!"
+            delay={200}
+            animateBy="words"
+            direction="top"
+            // onAnimationComplete={handleAnimationComplete}
+            className="text-2xl mb-8"
+          />
 
-        <div className="mt-4 w-24 mx-auto border-b-4 border-green-700"></div>
+          {/* <div className="mt-4 w-24 mx-auto border-b-4 border-green-700"></div> */}
 
-        <h2 className="mt-6 text-lg sm:text-xl md:text-2xl font-thin opacity-60 md:px-10 sm:px-10">
-          As a Full-Stack Developer, I create fast, scalable, and
-          high-performing websites that deliver real impact. Let’s turn your
-          ideas into powerful digital experiences!🚀
-        </h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-thin opacity-60 md:px-10 sm:px-20">
+            As a Full-Stack Developer, I create fast, scalable, and
+            high-performing websites that deliver real impact! 🚀
+            {/* Let’s turn your ideas into powerful digital experiences! 🚀 */}
+          </h2>
 
-        <a
-          href="#contact"
-          className="bricolage-grotesque-regular mt-8 inline-block px-6 py-3 text-lg bg-green-700 text-white rounded-full hover:bg-red-600 transition duration-300"
-        >
-          Let's Work Together
-        </a>
-      </div>
-    </header>
+          <a
+            href="#contact"
+            className="bricolage-grotesque-regular mt-8 inline-block px-6 py-3 text-lg bg-[#1db106] text-white rounded-full hover:bg-[#1db1067a] transition duration-300"
+          >
+            Let's Work Together
+          </a>
+        </div>
+      </header>
+    </>
   );
 }

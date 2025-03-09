@@ -16,7 +16,12 @@ body {
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
-
+/* .test {
+  color: #00d8ff;
+  color: #7cff67;
+  color: #048aa1;
+  color: #1db106;
+} */
 /* Dark Mode */
 /* body.dark {
   background-color: rgb(28, 28, 30);

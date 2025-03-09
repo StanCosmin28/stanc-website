@@ -39,25 +39,25 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed w-full transition-transform duration-300 ease-in-out left-0 bricolage-grotesque-regular ${
+        className={`z-50 fixed w-full transition-transform duration-300 ease-in-out left-0 bricolage-grotesque-regular ${
           visible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <Logo />
         <div className="flex md:justify-center justify-end mt-10 md:mr-0 mr-20 text-sm">
-          <div className="nav-bg px-5 md:py-3 py-2 rounded-full shadow-md">
-            <div className="hidden md:flex space-x-8">
+          <div className="nav-bg px-5  rounded-full shadow-md">
+            <div className="hidden md:flex  space-x-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-green-600 font-medium transition-colors"
+                  className="text-gray-700 md:py-3 py-2 hover:text-zinc-900 dark:text-gray-300  font-medium transition-colors"
                 >
                   {item.name}
                 </a>
               ))}
             </div>
-            <div className="md:hidden flex">
+            <div className="md:hidden flex md:py-3 py-2">
               <button
                 onClick={toggleMenu}
                 className="flex items-center text-gray-700 dark:text-gray-300 hover:text-green-600 focus:outline-none text-base"
