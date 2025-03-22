@@ -3,7 +3,7 @@ import { useSprings, animated } from "@react-spring/web";
 
 const BlurText = ({
   text = "",
-  delay = 200,
+  delay = 100,
   className = "",
   animateBy = "words", // 'words' or 'letters'
   direction = "top", // 'top' or 'bottom'
@@ -25,12 +25,12 @@ const BlurText = ({
       ? {
           filter: "blur(10px)",
           opacity: 0,
-          transform: "translate3d(0,-50px,0)",
+          transform: "translate3d(0,0,0)",
         }
       : {
           filter: "blur(10px)",
           opacity: 0,
-          transform: "translate3d(0,50px,0)",
+          transform: "translate3d(0,0,0)",
         };
 
   const defaultTo = [
@@ -83,10 +83,10 @@ const BlurText = ({
   );
 
   return (
-    <div className="container mx-auto max-w-screen-md px-4 text-center ">
+    <div className="container mx-auto max-w-screen-md px-4 text-center">
       <h1
         ref={ref}
-        className={`blur-text ${className}  text-4xl sm:text-5xl md:text-6xl font-bold leading-tight`}
+        className={`blur-text ${className}  text-4xl sm:text-5xl md:text-6xl font-bold md:leading-16 leading-thight`}
       >
         {springs.map((props, index) => (
           <animated.span

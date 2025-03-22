@@ -3,7 +3,10 @@
 /* Default Light Mode */
 body {
   /* background-color: #ffffff; */
-  background-color: rgb(28, 28, 30);
+  /* background-color: rgb(28, 28, 30); */
+  /* background-color: rgb(0, 28, 40); */
+  /* background-color: rgb(0, 28, 28); */
+  background-color: rgb(10, 10, 10);
   color: #ffffff;
   /* color: #000000; */
   transition: all 0.3s ease;
@@ -16,12 +19,12 @@ body {
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
-/* .test {
+.test {
   color: #00d8ff;
   color: #7cff67;
   color: #048aa1;
-  color: #1db106;
-} */
+  color: #1db1067a;
+}
 /* Dark Mode */
 /* body.dark {
   background-color: rgb(28, 28, 30);

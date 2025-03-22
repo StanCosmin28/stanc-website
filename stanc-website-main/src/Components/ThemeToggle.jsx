@@ -26,7 +26,7 @@ export default function ThemeToggle() {
   };
 
   return (
-    <div className="absolute fixed top-6 md:right-36 right-6">
+    <div className="absolute fixed top-6 md:right-36 right-6 z-100">
       {/* Theme Toggle Button */}
       <button
         onClick={toggleTheme}

@@ -1,4 +1,6 @@
 import BlurText from "./BlurText";
+import CTAButton from "./CTAButton";
+// import ThemeToggle from "./ThemeToggle";
 export default function Header() {
   // const handleAnimationComplete = () => {
   //   console.log("Animation completed!");
@@ -12,18 +14,18 @@ export default function Header() {
         borderColor="#fff"
         hoverFillColor="#222"
       /> */}
-      <header className="bricolage-grotesque-regular text-white  md:pt-55 pt-40 relative">
+      <header className="bricolage-grotesque-regular text-white  md:pt-55 pt-35 relative">
         <div className="container mx-auto max-w-screen-md px-4 text-center">
           {/* <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
             Building Digital Products, Brands, and Experiences
           </h1> */}
           <BlurText
             text="Building Digital Products, Brands, and Experiences!"
-            delay={200}
+            delay={100}
             animateBy="words"
             direction="top"
             // onAnimationComplete={handleAnimationComplete}
-            className="text-2xl mb-8"
+            className="text-2xl mb-4"
           />
 
           {/* <div className="mt-4 w-24 mx-auto border-b-4 border-green-700"></div> */}
@@ -33,14 +35,18 @@ export default function Header() {
             high-performing websites that deliver real impact! 🚀
             {/* Let’s turn your ideas into powerful digital experiences! 🚀 */}
           </h2>
-
-          <a
+          <div className="flex justify-center space-x-4 mt-8">
+            <CTAButton cta={"My Resume"} />
+            <CTAButton cta={"Book a Call"} />
+          </div>
+          {/* <a
             href="#contact"
             className="bricolage-grotesque-regular mt-8 inline-block px-6 py-3 text-lg bg-[#1db106] text-white rounded-full hover:bg-[#1db1067a] transition duration-300"
           >
             Let's Work Together
-          </a>
+          </a> */}
         </div>
+        {/* <ThemeToggle /> */}
       </header>
     </>
   );
