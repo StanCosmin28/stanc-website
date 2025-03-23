@@ -86,7 +86,7 @@ const BlurText = ({
     <div className="container mx-auto max-w-screen-md px-4 text-center">
       <h1
         ref={ref}
-        className={`blur-text ${className}  text-4xl sm:text-5xl md:text-6xl font-bold md:leading-16 leading-thight`}
+        className={`blur-text ${className} text-4xl sm:text-5xl md:text-6xl font-bold md:leading-16 leading-thight`}
       >
         {springs.map((props, index) => (
           <animated.span
